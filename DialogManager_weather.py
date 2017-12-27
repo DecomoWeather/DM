@@ -18,7 +18,7 @@ class DM_WEATHER:
         re=json.loads(result)
         weather=re['results'][0]['daily'][code_day]
         if act!={}:
-            for a in act:
+            #for a in act:
                 flag=weather_kb[weather['text_day']+'天']['weather_action'][act]
                 new_dct['inform_slots']={'weather':weather,'time':code_day,
                                      'location':location,'weather_action':flag}
